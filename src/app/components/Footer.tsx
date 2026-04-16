@@ -46,7 +46,7 @@ export function Footer() {
       <div className="max-w-360 w-full mx-auto px-8 py-8 grid sm:grid-cols-2 xl:grid-cols-4 gap-8">
         {cols.map((col) => {
           return col.type === "default" ? (
-            <div className="grid gap-3">
+            <div key={col.title} className="grid gap-3">
               <h3 className="text-lg font-medium">{col.title}</h3>
               <div className="grid gap-2">
                 {col.links?.map((link) => {

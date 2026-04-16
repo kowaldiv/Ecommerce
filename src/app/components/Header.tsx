@@ -27,7 +27,9 @@ export function Header() {
     <header className="sticky top-0 z-10 bg-background w-full h-16 border-b border-b-border">
       <div className="max-w-360 w-full h-full mx-auto px-8 flex justify-between items-center">
         <div className="flex gap-6 items-center">
-          <h1 className="font-medium text-2xl">TechStore</h1>
+          <a className="font-medium text-2xl" href="">
+            TechStore
+          </a>
           <div className="flex gap-2">
             {stores.map((store) => {
               return (
