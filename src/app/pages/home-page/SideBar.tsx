@@ -2,16 +2,8 @@ import { images } from "@/src/assets";
 import { Button } from "../../components/Button";
 import { Dropdown } from "../../components/Dropdown";
 import { Input } from "../../components/Input";
-import { useCatalogStore } from "@/src/stores/catalog-store";
 
 export function SideBar() {
-  const products = useCatalogStore((state) => state.products);
-  const uniqueBrands = [...new Set(products.map((p) => p.brand))]; // список всех брендов
-  const brandOptions = uniqueBrands.map((brand) => ({
-    label: brand,
-    value: brand,
-  })); // бренды для выподающего списка
-
   return (
     <aside className="lg:w-3xs w-full h-full grid gap-4">
       <div className="p-4 border border-border rounded-xl grid gap-4">
@@ -20,7 +12,7 @@ export function SideBar() {
           <div className="grid gap-6">
             <div className="grid gap-2">
               <p className="text-base font-medium">Brand</p>
-              <Dropdown className="w-full" options={brandOptions} />
+              <Dropdown className="w-full" />
             </div>
             <div className="grid gap-2">
               <p className="text-base font-medium">Price Range</p>

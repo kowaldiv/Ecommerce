@@ -1,4 +1,13 @@
-import type { Product } from "../stores/catalog-store";
+export interface Product {
+  id: number;
+  category: string;
+  make: string;
+  model: string;
+  price: number;
+  images: string[];
+  isSpecialOffer?: boolean;
+  brand: string;
+}
 
 export const products: Product[] = [
   {

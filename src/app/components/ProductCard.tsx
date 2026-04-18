@@ -1,7 +1,7 @@
-import type { Product } from "@/src/stores/catalog-store";
 import { useCallback, useRef, useState } from "react";
 import { Button } from "./Button";
 import { images } from "@/src/assets";
+import type { Product } from "@/src/data/products";
 
 export function ProductCard({ product }: { product: Product }) {
   const imagePlaceholderRef = useRef<HTMLDivElement>(null);
